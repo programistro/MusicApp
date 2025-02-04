@@ -1,0 +1,33 @@
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+
+option csharp_namespace = "GrpcAudioStreaming";
+
+service AudioStream {
+  rpc GetAvailableFiles(google.protobuf.Empty) returns (stream FileName);
+
+  // Получение формата выбранного файла
+  rpc GetFormat(FileName) returns (AudioFormat);
+
+  // Получение аудиопотока для выбранного файла
+  rpc GetStream(FileName) returns (stream AudioSample);
+}
+
+message FileName {
+  string FileName = 1;
+}
+
+message AudioSample {
+  string Timestamp = 1;
+  bytes Data = 2;
+}
+
+message AudioFormat {
+  int32 AverageBytesPerSecond = 1;
+  int32 BitsPerSample = 2;
+  int32 BlockAlign = 3;
+  int32 Channels = 4;
+  int32 ExtraSize = 5;
+  int32 SampleRate = 6;
+  string Encoding = 7;
+}
