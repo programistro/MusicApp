@@ -3,10 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MusicApp.AdminPage"
              Title="AdminPage">
-
+    
     <Grid>
-        <Button Text="Загрузить файл" Clicked="Button_Clicked" HorizontalOptions="Center" VerticalOptions="Center"
-                WidthRequest="150" HeightRequest="40"/>
+        <Button Text="Загрузить файлы" HeightRequest="50"
+                WidthRequest="140" Clicked="Button_Clicked"/>
     </Grid>
     
 </ContentPage>

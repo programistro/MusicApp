@@ -8,12 +8,12 @@
     Title="MusicApp">
 
     <ShellContent
-        Title="Домашняя страница"
+        Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
     <ShellContent
-    Title="Панель администратора"
-    ContentTemplate="{DataTemplate local:AdminPage}"
-    Route="AdminPage" />
+       Title="Панель администратора"
+       ContentTemplate="{DataTemplate local:AdminPage}"
+       Route="AdminPage" />
 
 </Shell>

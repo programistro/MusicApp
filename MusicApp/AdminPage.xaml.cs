@@ -7,20 +7,38 @@ public partial class AdminPage : ContentPage
 		InitializeComponent();
 	}
 
-    private async void Button_Clicked(object sender, EventArgs e)
+    private void Button_Clicked(object sender, EventArgs e)
     {
-		var result = await FilePicker.PickAsync(new PickOptions
-		{
-			PickerTitle = "Выберите файл",
-		});
+        //var result = await FilePicker.PickAsync(new PickOptions
+        //{
+        //    PickerTitle = "Выберите файл",
+        //});
 
-		if (result == null)
-		{
-			return;
-		}
+        //if (result == null)
+        //{
+        //    return;
+        //}
 
-		var stream = await result.OpenReadAsync();
+        //var stream = await result.OpenReadAsync();
 
+        //var content = new MultipartFormDataContent();
 
+        //content.Add(new StreamContent(stream), "file", result.FileName);
+
+        //var httpClient = new HttpClient();
+        //string serverUrl = "https://localhost:7218/api/upload-file";
+
+        //var response = await httpClient.PostAsync(serverUrl, content);
+
+        //// Проверяем результат
+        //if (response.IsSuccessStatusCode)
+        //{
+        //    var responseContent = await response.Content.ReadAsStringAsync();
+        //    //await DisplayAlert("Успех!", "Файл успешно загружен", "ОК");
+        //}
+        //else
+        //{
+        //    //await DisplayAlert("Ошибка", "Не удалось загрузить файл", "ОК");
+        //}
     }
 }
